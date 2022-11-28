@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, login_required, login_user, UserMixin, logout_user
 from werkzeug.security import generate_password_hash, check_password_hash
-from cloudipsp import Api, Checkout
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///cars.db'
