@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} Детальный просмотр {% endblock %}
+{% block pagetitle %} Детальный просмотр {% endblock %}
+
+{% block content %}
+
+    <div class="card" style="width: 18rem;">
+        <img src="{{car.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{car.make}}</h5>
+            <p class="card-text">{{car.model}}</p>
+            <p class="card-text">{{car.car_body}}</p>
+            <p class="card-text">{{car.year}}</p>
+            <p class="card-text">{{car.producing}}</p>
+            <p class="card-text">{{car.condition}}</p>
+            <a href="#" class="btn btn-primary">Купить</a>
+        </div>
+    </div>
+
+{% endblock %}

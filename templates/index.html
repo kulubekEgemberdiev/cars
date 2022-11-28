@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %} Главная {% endblock %}
+{% block pagetitle %} Главная {% endblock %}
+
+{% block content %}
+
+
+<div class="row">
+    {% for car in cars %}
+
+    <div class="card me-4 ms-4" style="width: 18rem;">
+        <img src="{{car.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{car.make}}</h5>
+            <p class="card-text">{{car.model}}</p>
+            <p class="card-text">{{car.car_body}}</p>
+            <p class="card-text">{{car.year}}</p>
+            <p class="card-text">{{car.producing}}</p>
+            <p class="card-text">{{car.condition}}</p>
+            <a href="/detail-{{car.id}}" class="btn btn-primary">Посмотреть</a>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+{% endblock %}
